@@ -318,9 +318,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1354337169}
   - component: {fileID: 1354337168}
-  - component: {fileID: 1354337167}
   - component: {fileID: 1354337170}
   - component: {fileID: 1354337166}
+  - component: {fileID: 1354337167}
   m_Layer: 0
   m_Name: Test_Floor
   m_TagString: Untagged
@@ -363,7 +363,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
