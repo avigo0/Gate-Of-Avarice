@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+* Dash works by applying a force onto the player's rigidbody.
+*/
 public class Dash : MonoBehaviour {
-    public PlayerMovement movement;
-    public float posX;
-    public float poxY;
-    Rigidbody2D rb;
-    public float dashSpeed = 80f;
+    Rigidbody2D rb;                 //Used to apply the force to create dash
+    public float dashSpeed = 80f;   //Amount of force to be applied to dash
+    public PlayerMovement movement; //Used to find out what direction player is 
+                                    //moving
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class Dash : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        //Checks if the user want to dash and what direction player is moving
+        //Makes it so player cannot dash twice in the air
         if (Input.GetButtonDown("Dash")){
             if (movement.direction < 0)
             {
@@ -28,4 +31,5 @@ public class Dash : MonoBehaviour {
             
         }
 	}
+
 }
