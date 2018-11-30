@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Jump works by applying a force underneath the player object's rigidbody2D.
+ */
 public class Jump : MonoBehaviour {
-
     public float jumpForce = 10f; //jumping force
     Rigidbody2D rb;               //physics component to apply jump
     public bool jumping = false;  //true if the person is jumping
