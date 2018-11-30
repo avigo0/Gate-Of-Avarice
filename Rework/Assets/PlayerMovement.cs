@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour {
     public float runSpeed = 40f;
     public CharacterController2D controller;
     bool jump = false;
+    public float direction = 1;
 
     //Gets ran every frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        direction = Input.GetAxisRaw("Horizontal");
         if(Input.GetButtonDown("Jump")){
             jump = true;
         }
