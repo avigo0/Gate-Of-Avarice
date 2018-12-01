@@ -9,7 +9,7 @@ public class Dash : MonoBehaviour {
     public float dashSpeed = 80f;   //Amount of force to be applied to dash
     public PlayerMovement movement; //Used to find out what direction player is 
                                     //moving
-
+    public ParticleSystem dashTrail; //Dash Particle Effects
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,10 +23,12 @@ public class Dash : MonoBehaviour {
             if (movement.direction < 0)
             {
                 rb.AddForce(Vector2.left * dashSpeed, ForceMode2D.Impulse);
+                dashTrail.Emit(10);
             }
             else if (movement.direction > 0)
             {
                 rb.AddForce(Vector2.right * dashSpeed, ForceMode2D.Impulse);
+                dashTrail.Emit(10);
             }
             
         }
